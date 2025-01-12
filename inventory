@@ -1,18 +1,5 @@
-[ansible]
+[all]
 10.10.1.251
 10.10.1.252
 10.10.1.253
 
-[pve]
-10.10.1.3
-#wg
-10.10.1.107 
-
-[pve2]
-10.10.1.222
-10.10.1.108 
-10.10.1.210
-
-[ansible:vars]
-ansible_user=root
-ansible_ssh_private_key_file=/home/borisn/.ssh/ansible
