@@ -1,0 +1,21 @@
+Pe workstation:
+ssh-keygen -t ed25519 -C "Boris"
+    /home/borisn/ansible
+    passphrase: no passphrase
+
+ssh-copy-id -i ~/.ssh/ansible.pub 10.10.1.201
+ssh-copy-id -i ~/.ssh/ansible.pub 10.10.1.202
+ssh-copy-id -i ~/.ssh/ansible.pub 10.10.1.203
+
+Daca am pus passphrase: 
+    eval $(ssh-agent)   -cashuie passphrase
+    Agent pid 2362 68679
+    ps -aux | grep 
+      borisn     68679  0.0  0.0   7984  1084 ?        Ss   22:47   0:00 ssh-agent
+    ssh-add
+      Enter passphrase: parola
+      Identity has added: /home/borisn/.ssh/ansible
+
+Alias:
+    alias ssha='eval $(ssh-agent) && ssh-add'
+        add in ~/.bashrc
