@@ -27,7 +27,8 @@ private_key_file = ~/.ssh/ansible
 ansible all -m ping 
 ansible all --list-hosts
 ansible all -m gather_facts
-
 ansible all -m gather_facts --limit 10.10.1.251
 
-
+git add *
+git commit -m "added episod4.txt"
+git push origin episod4
