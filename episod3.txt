@@ -26,9 +26,12 @@ In WSL clone with SSH
     git push origin master 
 
 Branch:
-  create a branch: git checkout -b new_branch
+  create a branch: git checkout -b episod3
   git branch 
-  git checkout new_branch 
   
-  git checkout main
-
+  git push -u origin episod3
+  git add *
+  git commit -m "added episod3.txt"  
+  
+ 
+  git checkout main sau git switch main 
