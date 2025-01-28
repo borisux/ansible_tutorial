@@ -1,0 +1,34 @@
+Setting up the Git Repository 
+
+sudo apt update
+sudo apt install git 
+
+In github.com
+     Profile (dreapta sus)-> Settings-> SSH and GPG Keys -> New SSH Keys
+      Title: ansible
+      Key:
+        ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJWZ/PYtAy7VAgNMicPEKenPlg6palKLiQqlroSxu6JB Used for Ansible Tutoarial
+        (cat ~borisn/.ssh/ansible.pub)
+
+In WSL clone with SSH
+    git clone git@github.com:borisux/ansible_tutorial.git .
+    git config --global user.name "Boris"
+    git config --global user.email "borisn@gmail.com"
+    cat ~/.gitconfig
+
+    git status 
+    git diff 
+    
+    git add README.md 
+    git status 
+
+    git commit -m "updated readme file, initial commit"
+    git push origin master 
+
+Branch:
+  create a branch: git checkout -b new_branch
+  git branch 
+  git checkout new_branch 
+  
+  git checkout main
+
