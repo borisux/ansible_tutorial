@@ -1,0 +1,33 @@
+in WSL 
+    sudo apt update
+    sudo apt install ansible
+
+Create Inventory file
+
+    vi inventory
+    10.10.1.251
+    10.10.1.252
+    10.10.1.253
+    10.10.1.254
+
+git add inventory
+git commit =m " first inventory file added the host"
+
+ansible all --key-file ~/.ssh/ansible -i inventory -m ping 
+    10.10.1.253 | SUCCESS 
+    ...
+
+Setting the ansible config file: 
+
+vi ansible.cfg
+[defaults]
+inventory = inventory 
+private_key_file = ~/.ssh/ansible
+
+ansible all -m ping 
+ansible all --list-hosts
+ansible all -m gather_facts
+
+ansible all -m gather_facts --limit 10.10.1.251
+
+
