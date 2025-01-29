@@ -1,0 +1,5 @@
+Episod6:
+
+vim install.yml 
+
+ansible-playbook --ask-become-pass install_apache.yml
